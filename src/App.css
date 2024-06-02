@@ -1,0 +1,12 @@
+:root{
+  --main-primary-color: gold;
+}
+body{
+  height: 100% !important;
+  background: #121212;
+}
+@media screen and (max-width:992px){
+  .backgroundtext{
+    color: #121212 !important;
+  }
+}

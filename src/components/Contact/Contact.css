@@ -1,0 +1,148 @@
+.contact{
+    .navbackground{
+        /* margin-top: 100px; */
+        background-color: #121212;
+        height: 160px;
+    }
+    .backgrounddiv{
+        text-align: center;
+    }
+    .backgroundtext{
+        font-size: 110px;
+        /* left: 0; */
+        letter-spacing: 5px;
+        line-height: .7;    
+        position: relative;
+        /* right: 0;
+        top: 100px; */
+        text-transform: uppercase;
+        font-weight: 800;
+        
+        color: hsla(0,0%,100%,.07);
+    }
+    .contact_title{
+        font-size: 52px;
+        font-weight: 900!important;
+        color: #fff;
+        left: 57px !important;
+        top: 46px!important;
+    
+        position: absolute;
+        text-transform: uppercase;
+        margin: 0;
+        /* top: 15px; */
+    }
+    .contact_title span{
+        color: var(--main-primary-color);
+    }
+    @media screen and (max-width:777px) {
+        .contact_title{
+            font-size: 46px !important;
+            top: 45px!important;
+        }
+        .backgroundtext{
+            font-size: 100px;
+        }
+    }
+    @media screen and (max-width:515px) {
+        .contact_title{
+            font-size: 20px !important;
+            top: 30px!important;
+        }
+        .backgroundtext{
+            font-size: 50px !important;
+        }
+    }
+    @media screen and (max-width:675px) {
+        .contact_title{
+            font-size: 23px !important;
+            top: 19px!important;
+            left: 30px !important;
+        }
+        .backgroundtext{
+            font-size: 53px !important;
+        }
+    }
+    @media screen and (max-width:350px) {
+        
+        .contact_title{
+            font-size: 23px !important;
+            /* top: 1.5rem!important; */
+            left:21px !important;
+        }
+        .backgroundtext{
+            font-size: 50px !important;
+            left: -10px !important;
+        }
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.name , .email{
+    border-radius: 20px;
+    border: 1px solid #111;
+    background: #252525;
+    width: 95%;
+    height: 40px;
+    padding-left: 20px;
+}
+.subject{
+    height: 40px;
+    
+}
+.message{
+    padding-top: 10px;
+}
+.subject ,.message{
+    border-radius: 30px;
+    border: 1px solid #111;
+    background: #252525;
+    width: 98%;
+    padding-left: 20px;
+}
+.address i{
+    font-size: 36px;
+    color: var(--main-primary-color);
+}
+.mail i{
+    font-size: 36px;
+    color: var(--main-primary-color);
+}
+.call i{
+    font-size: 36px;
+    color: var(--main-primary-color);
+}
+.send_message{
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+    border: 2px solid var(--main-primary-color);
+}
+.send_message:focus{
+    /* border: none; */
+    box-shadow: none;
+}
+.send_message:hover{
+    color: black!important;
+    background-color: var(--main-primary-color);
+}
+.facebook{
+    color: white;
+    width: 40px;
+    background: #2b2a2a;
+    border-radius: 50%;
+}
+.facebook:hover{
+    background: var(--main-primary-color);
+}
+@media  screen and (max-width:992px) {
+    .form_col{
+        margin-top: 40px;
+    }
+}
+input:focus{
+    border: none !important;
+    box-shadow: none !important;
+}

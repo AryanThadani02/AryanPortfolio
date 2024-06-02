@@ -1,0 +1,96 @@
+.aside{
+    position: fixed;
+    right: 30px;
+    transition: 1s!important;
+    top: 30%;
+}
+
+.l1,.l2,.l3,.l4,.l5{
+    color: white;
+    font-size: 18px;
+    width: 50px;
+    background:#121212;
+    margin-top: 20px;
+    transition: 1s!important;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    list-style-type: none;
+    background-color: var(--main-primary-color);
+    text-decoration: none;
+}
+.l1 i,.l2 i,.l3 i,.l4 i,.l5 i{
+    z-index: 1;
+}
+.l1_h6 , .l2_h6,.l4_h6,.l5_h6{
+    position: absolute;
+    transition: 1s!important;
+    right: 28px;
+    display: flex;
+    justify-content: center;
+    display: none;
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-top: 8px;
+    background-color: var(--main-primary-color);
+    z-index: 0;
+    height: 50px;
+    width: 100px;
+}
+.l3_h6{
+    position: absolute;
+    right: 28px;
+    display: flex;
+    justify-content: center;
+    display: none;
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-top: 8px;
+    background-color: var(--main-primary-color);
+    z-index: 0;
+    height: 50px;
+    width: 120px;
+}
+
+.l1:hover,.l2:hover,.l3:hover,.l4:hover,.l5:hover{
+    .l1_h6{
+        display: flex;
+        color: black;
+        font-weight: 700;
+    }
+    .l2_h6{
+        transition: 1s;
+        display: flex;
+        color: black;
+        font-weight: 700;
+
+    }
+    .l3_h6{
+        transition: 1s;
+        display: flex;
+        color: black;
+        font-weight: 700;
+    }
+    .l4_h6{
+        transition: 1s;
+        display: flex;
+        color: black;
+        font-weight: 700;
+    }
+    .l5_h6{
+        transition: 1s;
+        display: flex;
+        color: black;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width:992px) {
+    .aside{
+        display: none;
+    }
+
+}
