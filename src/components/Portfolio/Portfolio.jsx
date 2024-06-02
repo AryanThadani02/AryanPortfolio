@@ -64,7 +64,8 @@ function Portfolio() {
     },
     {
       href: "https://aryanthadani02.github.io/Loreal-Clone/",
-      imgSrc: "Font-LOReal-Logo.jpg",
+      imgSrc:
+        "https://1000logos.net/wp-content/uploads/2017/03/Font-LOreal-Logo.jpg",
       title: "Clone",
       subtitle: "Loreal",
     },
