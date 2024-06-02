@@ -181,3 +181,7 @@
     /* background-color: #212121; */
     text-align: center;
   }
+  .api{
+    font-size: small;
+    font-weight: 100;
+  }

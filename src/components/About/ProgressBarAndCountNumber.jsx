@@ -1,133 +1,91 @@
-import React, { useEffect, useState } from 'react';
-import './About.css';
+import React, { useEffect, useState } from "react";
+import "./About.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function ProgressBarAndCountNumber() {
-    const [count, setCount] = useState(0);
-    const MAX = 80;
+  const [count, setCount] = useState(0);
+  const MAX = 80;
 
-    useEffect(() => {
-        const progressBars = document.querySelectorAll('.progress');
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation should happen only once while scrolling down
+    });
+    AOS.refresh(); // Refresh AOS to detect changes
+  }, []);
 
-        const run = setInterval(() => {
-            setCount((prevCount) => prevCount + 1);
+  useEffect(() => {
+    const progressBars = document.querySelectorAll(".progress");
 
-            progressBars.forEach((progressBar) => {
-                const targetValue = parseInt(progressBar.dataset.progress, 10);
+    const run = setInterval(() => {
+      setCount((prevCount) => {
+        if (prevCount >= MAX) {
+          clearInterval(run);
+          return prevCount;
+        }
+        return prevCount + 1;
+      });
 
-                if (count <= targetValue) {
-                    const gradient = `conic-gradient(#ffb400 ${count}%, #212428 0)`;
-                    progressBar.parentElement.style.background = gradient;
-                    progressBar.firstElementChild.textContent = `${count}%`;
-                }
+      progressBars.forEach((progressBar) => {
+        const targetValue = parseInt(progressBar.dataset.progress, 10);
 
-                if (count >= MAX) {
-                    clearInterval(run);
-                }
-            });
-        }, 20);
+        if (count <= targetValue) {
+          const gradient = `conic-gradient(#ffb400 ${count}%, #212428 0)`;
+          progressBar.parentElement.style.background = gradient;
+          progressBar.firstElementChild.textContent = `${count}%`;
+        }
+      });
+    }, 20);
 
-        return () => clearInterval(run);
+    return () => clearInterval(run);
+  }, [count]);
 
-    }, [count]);
+  return (
+    <div className="container mt-5">
+      <div className="row">
+        <h3 className="mb-5 head fw-bold">
+          MY <span style={{ color: "gold" }}> SKILLS</span>
+        </h3>
+      </div>
+      <div className="row">
+        {renderSkill("HTML", 70, "zoom-out-up")}
+        {renderSkill("CSS", 60, "zoom-out-up", 100)}
+        {renderSkill("JavaScript", 50, "zoom-out-up", 200)}
+      </div>
+      <div className="row my-5">
+        {renderSkill("ReactJS", 25, "zoom-out-up")}
+        {renderSkill("Version Control", 50, "zoom-out-up", 100)}
+        {renderSkill("BootStrap", 50, "zoom-out-up", 200)}
+      </div>
+    </div>
+  );
 
+  function renderSkill(skill, progress, animation, delay = 0) {
     return (
-        <div className="container mt-5">
-            <div className="row">
-                <h3 className='mb-5 head fw-bold'>MY <span style={{ color: "gold" }} > SKILLS</span></h3>
+      <div
+        className="col-12 col-sm-4"
+        data-aos={animation}
+        data-aos-delay={delay}
+        key={skill}
+      >
+        <div className="parent-skill">
+          <div className="skill">
+            <div className="progress" data-progress={progress}>
+              <span className="progress-number">{count}%</span>
             </div>
-            <div className="row "> 
-                <div className="col-12 col-sm-4 ">
-                    <div className="parent-skill">
-                        <div className="skill">
-                            <div className="progress" data-progress="70">
-                                <span className="progress-number">70%</span>
-                            </div>
-                        </div>
-                        <div className="row my-3 justify-content-center">
-                            <div className="col-6 col-sm-10">
-                                <span className="title1 t_topic" style={{ color: "white" }}>HTML</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-12 col-sm-4">
-                    <div className="parent-skill">
-                        <div className="skill">
-                            <div className="progress" data-progress="60">
-                                <span className="progress-number">{count}%</span>
-                            </div>
-                        </div>
-                        <div className="row my-3 justify-content-center">
-                            <div className="col-6">
-                                <span className="title1 t_topic" style={{ color: "white" }}>CSS</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12 col-sm-4">
-                    <div className="parent-skill">
-                        <div className="skill">
-                            <div className="progress" data-progress="50">
-                                <span className="progress-number">{count}%</span>
-                            </div>
-                        </div>
-                        <div className="row my-3 justify-content-center">
-                            <div className="col-6">
-                                <span className="title1" style={{ color: "white" }}>JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div className="row my-3 justify-content-center">
+            <div className="col-6 col-sm-10">
+              <span className="title1 t_topic" style={{ color: "white" }}>
+                {skill}
+              </span>
             </div>
-
-            <div className="row my-5">
-                <div className="col-12 col-sm-4">
-                    <div className="parent-skill">
-                        <div className="skill">
-                            <div className="progress" data-progress="25">
-                                <span className="progress-number">25%</span>
-                            </div>
-                        </div>
-                        <div className="row my-3 justify-content-center">
-                            <div className="col-6">
-                                <span className="title1 t_topic" style={{ color: "white" }}>ReactJS</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-12 col-sm-4">
-                    <div className="parent-skill">
-                        <div className="skill">
-                            <div className="progress" data-progress="50">
-                                <span className="progress-number">{count}%</span>
-                            </div>
-                        </div>
-                        <div className="row my-3 justify-content-center">
-                            <div className="col-6">
-                                <span className="title1 t_topic" style={{ color: "white" }}>Version&nbsp;Control</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12 col-sm-4">
-                    <div className="parent-skill">
-                        <div className="skill">
-                            <div className="progress" data-progress="50">
-                                <span className="progress-number">{count}%</span>
-                            </div>
-                        </div>
-                        <div className="row my-3 justify-content-center">
-                            <div className="col-6">
-                                <span className="title1 t_topic" style={{ color: "white" }}>BootStrap</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     );
+  }
 }
 
 export default ProgressBarAndCountNumber;
