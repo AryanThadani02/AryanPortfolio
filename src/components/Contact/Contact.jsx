@@ -73,11 +73,11 @@ function Contact() {
                 <div className="row">
                   <a
                     class="btn facebook"
-                    href="https://www.facebook.com/profile.php?id=100006233594859"
+                    href="https://join.slack.com/t/slack-nep2451/shared_invite/zt-2k3egjf5w-yDypt~EmokMkI7c5AYqntA"
                     target="_blank"
                     role="button"
                   >
-                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-slack"></i>
                   </a>
                   <a
                     class="btn facebook mx-3"
