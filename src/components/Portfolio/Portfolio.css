@@ -229,7 +229,7 @@
   
   .modal-image {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: 400px; /* Maintain aspect ratio */
     margin-bottom: 20px;
   }
   
