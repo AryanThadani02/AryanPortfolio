@@ -267,7 +267,7 @@ function Portfolio() {
               </p>
             )}
             <div
-              className="modal-links"
+              className="modal-links mx-auto mx-md-0"
               data-aos="flip-down"
               data-aos-delay="1500"
             >
