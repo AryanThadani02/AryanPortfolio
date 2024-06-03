@@ -207,7 +207,10 @@ function Portfolio() {
               </div>
             </div>
 
-            <div className="container row justify-content-center mt-4 mb-4">
+            <div
+              className="container row justify-content-center mt-4 mb-4"
+              style={{ cursor: "pointer" }}
+            >
               {projects.map((project, index) => (
                 <div
                   className="col-3 bg_color me-2"
@@ -291,8 +294,6 @@ function Portfolio() {
           </div>
         </div>
       )}
-
-      <Sidebar />
     </>
   );
 }

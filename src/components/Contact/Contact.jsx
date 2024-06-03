@@ -127,7 +127,7 @@ function Contact() {
                         autoComplete="off"
                       />
                     </div>
-                    <div className="col-6 pe-md-5 my-4">
+                    <div className="col-6 pe-md-5 my-4 margin">
                       <input
                         type="email"
                         className="email text-light"

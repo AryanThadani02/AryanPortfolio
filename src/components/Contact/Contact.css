@@ -62,6 +62,9 @@
         .backgroundtext{
             font-size: 53px !important;
         }
+        .margin{
+            margin-left: 0px;
+        }
     }
     @media screen and (max-width:350px) {
         
@@ -145,4 +148,7 @@
 input:focus{
     border: none !important;
     box-shadow: none !important;
+}
+.margin{
+    margin-left: -9px;
 }

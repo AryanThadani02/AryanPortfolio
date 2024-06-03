@@ -36,7 +36,7 @@ function Sidebar() {
             data-aos="fade-left"
             data-aos-delay="200"
           >
-            <h6 className="l5_h6">SERVICES</h6>
+            <h6 className="l5_h6">SKILLS</h6>
             <i className="fa-solid fa-layer-group text-dark"></i>
           </NavLink>
           <NavLink
