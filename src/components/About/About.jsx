@@ -113,21 +113,24 @@ const About = () => {
   function renderExperienceAndEducationLeft() {
     const experiences = [
       {
+        date: "2024 - Present",
+        description: "Web Development Internship - ",
+        company: "Rising Academies",
+      },
+      {
         date: "2023 - Present",
-        description: "Full Stack Web Development Course - Geekster",
+        description: "Full Stack Web Development Course - ",
+        company: "Geekster",
       },
       {
         date: "2023",
-        description: "Web Development Internship - Open Innovations Lab",
+        description: "Web Development Internship - ",
+        company: "Open Innovations Lab",
       },
       {
         date: "2023",
-        description: "JavaScript & ReactJs Training - Open Innovations Lab",
-      },
-      {
-        date: "2020-2023",
-        description:
-          "Bachelor of Computer Application - Lachoo Memorial College",
+        description: "JavaScript & ReactJs Training - ",
+        company: "Open Innovations Lab",
       },
     ];
 
@@ -136,7 +139,10 @@ const About = () => {
         {experiences.map((exp, index) => (
           <li key={index} data-aos="fade-up" data-aos-delay={index * 100}>
             <span className="time mt-4">{exp.date}</span>
-            <h5>{exp.description}</h5>
+            <h5>
+              {exp.description}
+              <span className="fst-italic fw-normal">{exp.company}</span>
+            </h5>
           </li>
         ))}
       </ul>
@@ -145,19 +151,21 @@ const About = () => {
 
   function renderExperienceAndEducationRight() {
     const experiences = [
-      { date: "2021-2023", description: "Home Tutor - Personal" },
+      {
+        date: "2020-2023",
+        description: "Bachelor of Computer Application - ",
+        company: "Lachoo Memorial College",
+      },
+      { date: "2021-2023", description: "Home Tutor - ", company: "Personal" },
       {
         date: "2022",
-        description: "Beginner Front-End Development Course - T4 Tech",
+        description: "Beginner Front-End Development Course - ",
+        company: "T4 Tech",
       },
       {
         date: "2020",
-        description:
-          "Higher Secondary School - Our Lady Of Pillar Convent School",
-      },
-      {
-        date: "2018",
-        description: "Secondary School - Our Lady Of Pillar Convent School",
+        description: "Higher Secondary School - ",
+        company: "Our Lady Of Pillar Convent School",
       },
     ];
 
@@ -166,7 +174,10 @@ const About = () => {
         {experiences.map((exp, index) => (
           <li key={index} data-aos="fade-up" data-aos-delay={index * 100}>
             <span className="time mt-4">{exp.date}</span>
-            <h5>{exp.description}</h5>
+            <h5>
+              {exp.description}
+              <span className="fst-italic fw-normal">{exp.company}</span>
+            </h5>
           </li>
         ))}
       </ul>
