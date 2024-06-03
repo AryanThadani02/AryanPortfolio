@@ -52,7 +52,7 @@ function Sidebar() {
             to="/contact"
             className="l4"
             data-aos="fade-left"
-            data-aos-delay="400"
+            // data-aos-delay="400"
           >
             <h6 className="l4_h6">CONTACT</h6>
             <i className="fa-solid fa-envelope text-dark"></i>

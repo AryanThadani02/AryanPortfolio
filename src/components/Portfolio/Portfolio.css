@@ -185,3 +185,70 @@
     font-size: small;
     font-weight: 100;
   }
+
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #333; /* Dark background color */
+    color: gold; /* Gold text color */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 8px;
+  }
+  
+  .close {
+    color: gold; /* Gold color for the close button */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #fff; /* White color on hover and focus */
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-image {
+    height: 400px;
+    /* height: auto; Maintain aspect ratio */
+    margin-bottom: 20px;
+  }
+  
+  .modal-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-link {
+    color: gold; /* Gold color for links */
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .modal-link:hover {
+    color: white; /* White color on hover */
+  }
+  
